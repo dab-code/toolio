@@ -1,0 +1,33 @@
+{
+  "name": "@dab-code/toolio",
+  "version": "1.0.0",
+  "description": "Toolio - Accessible tooltips in a lightweight and easy-to-use package",
+  "main": "dist/index.js",
+  "keywords": ["tooltip", "tooltips", "'tool", "'accessible tooltip"],
+  "homepage": "http://github.com/dab-code/toolio",
+  "bugs": {
+    "url": "http://github.com/dab-code/toolio/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dab-code/toolio.git"
+  },
+  "scripts": {
+    "build": "webpack --config=webpack.config.js"
+  },
+  "author": "Dann Bos",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "closure-webpack-plugin": "^2.5.0",
+    "google-closure-compiler": "^20210302.0.0",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
