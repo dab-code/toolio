@@ -20,13 +20,31 @@ export interface ITooltipOptions {
     fontWeight: string;
 }
 
-class Tooltip {
+export default class Toolio {
     options: DeepPartial<ITooltipOptions>;
     debounceTimer: ReturnType<typeof setTimeout>  | null;
 
     constructor(opts: DeepPartial<ITooltipOptions> | null) {
         this.options = { ...{ placement: DEFAULT_PLACEMENT, color: DEFAULT_COLOR, background: DEFAULT_BACKGROUND, padding: DEFAULT_PADDING, borderRadius: DEFUALT_BORDERRADIUS, fontSize: DEFAULT_FONTSIZE, fontWeight: DEFAULT_FONTWEIGHT }, ...opts };
         this.debounceTimer = null;
+
+        this.init();
+    }
+
+    private init(){
+        let _tooltips = document.querySelectorAll('[toolio]');
+
+        for (let i = 0; i < _tooltips.length; i++) {
+            let _tooltip = _tooltips[i] as HTMLElement;
+            let value = _tooltip.getAttribute('toolio');
+
+            if (!value) return; // Guard
+
+            let options = _tooltip.getAttribute('toolio-options');
+            let opts = options ? JSON.parse(options) : null;
+
+            this.createItem(_tooltip, value, opts);
+        }
     }
 
     public createItem(elm: HTMLElement, value: string, opts?: DeepPartial<ITooltipOptions>) {
@@ -83,7 +101,7 @@ class Tooltip {
         });
     }
 
-    public showTip(elm: HTMLElement, placement: TooltipPlacement) {
+    private showTip(elm: HTMLElement, placement: TooltipPlacement) {
         if(this.debounceTimer){
             clearTimeout(this.debounceTimer)
         }
@@ -106,22 +124,4 @@ class Tooltip {
     }
 
     private _uniqueId = () => Math.random().toString(36).substr(2, 9);
-}
-
-export default function toolio(opts?: DeepPartial<ITooltipOptions>) {
-    let tool = new Tooltip(opts ?? null);
-
-    let _tooltips = document.querySelectorAll('[toolio]');
-
-    for (let i = 0; i < _tooltips.length; i++) {
-        let _tooltip = _tooltips[i] as HTMLElement;
-        let value = _tooltip.getAttribute('toolio');
-
-        if (!value) return; // Guard
-
-        let options = _tooltip.getAttribute('toolio-options');
-        let opts = options ? JSON.parse(options) : null;
-
-        tool.createItem(_tooltip, value, opts);
-    }
 }
