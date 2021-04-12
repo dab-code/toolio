@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Toolio - Accessible tooltips in a lightweight and easy-to-use package",
   "main": "dist/index.js",
-  "keywords": ["tooltip", "tooltips", "'tool", "'accessible tooltip"],
+  "keywords": ["tooltip", "tooltips", "tool", "'accessible tooltip"],
   "homepage": "http://github.com/dab-code/toolio",
   "bugs": {
     "url": "http://github.com/dab-code/toolio/issues"
