@@ -7,7 +7,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: ['babel-loader'],
         exclude: /node_modules/,
       },
     ],
@@ -18,18 +18,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-  },
-  optimization: {
-    minimizer: [
-      new ClosurePlugin({mode: 'STANDARD'}, {
-        // compiler flags here
-        //
-        // for debugging help, try these:
-        //
-        // formatting: 'PRETTY_PRINT'
-        // debug: true,
-        // renaming: false
-      })
-    ]
+    libraryTarget: 'umd',
+    library: '@dab-code/toolio'
   }
 };
