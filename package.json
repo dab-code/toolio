@@ -2,7 +2,11 @@
   "name": "@dab-code/toolio",
   "version": "1.0.2",
   "description": "Toolio - Accessible tooltips in a lightweight and easy-to-use package",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "browser": "dist/index.js",
+  "files": ["dist"],
+  "types": "dist/index.d.ts",
   "keywords": [
     "tooltip",
     "tooltips",
@@ -21,22 +25,14 @@
     "url": "git@github.com:dab-code/toolio.git"
   },
   "scripts": {
-    "build": "webpack --config=webpack.config.js"
+    "build": "rimraf dist && rollup -c"
   },
   "author": "Dann Bos",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/preset-typescript": "^7.13.0",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "closure-webpack-plugin": "^2.5.0",
-    "google-closure-compiler": "^20210302.0.0",
-    "ts-loader": "^8.1.0",
-    "typescript": "^4.2.4",
-    "webpack": "^5.31.2",
-    "webpack-cli": "^4.6.0"
-  },
-  "dependencies": {}
+    "rimraf": "^3.0.2",
+    "rollup": "^2.45.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.4"
+  }
 }

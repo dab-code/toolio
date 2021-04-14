@@ -8,9 +8,9 @@ const DEFAULT_FONTWEIGHT: string = 'normal';
 const DEFAULT_OPTIONS: object = { visibility: 'hidden', position: 'absolute', transition: '.3s ease', opacity: 0, zIndex: 999 };
 
 type DeepPartial<T> = { [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]; };
-export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 
-export interface ITooltipOptions {
+interface ITooltipOptions {
     placement: TooltipPlacement;
     color: string;
     background: string;
@@ -20,7 +20,7 @@ export interface ITooltipOptions {
     fontWeight: string;
 }
 
-export default class Toolio {
+class Toolio {
     options: DeepPartial<ITooltipOptions>;
     debounceTimer: ReturnType<typeof setTimeout>  | null;
 
@@ -92,6 +92,7 @@ export default class Toolio {
             if (align === 'bottom') return { bottom: 0, transform: 'translate(-50%, calc(100% + .5rem))' };
             if (align === 'left') return { left: 0, transform: 'translate(calc(-100% - .5rem), -50%)' };
         }
+        return null;
     }
 
     private _assignEvents(elm: HTMLElement, template: HTMLElement, placement: TooltipPlacement, initialEvents: string[], endEvents: string[]) {
@@ -125,3 +126,5 @@ export default class Toolio {
 
     private _uniqueId = () => Math.random().toString(36).substr(2, 9);
 }
+
+export { Toolio, TooltipPlacement, ITooltipOptions};
