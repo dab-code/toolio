@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function(){
-    toolio.Toolio();
+    toolio.Toolio({placement: 'bottom'});
 });

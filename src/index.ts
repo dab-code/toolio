@@ -27,12 +27,12 @@ class Toolio {
     constructor(opts: DeepPartial<ITooltipOptions> | null) {
         this.options = { ...{ placement: DEFAULT_PLACEMENT, color: DEFAULT_COLOR, background: DEFAULT_BACKGROUND, padding: DEFAULT_PADDING, borderRadius: DEFUALT_BORDERRADIUS, fontSize: DEFAULT_FONTSIZE, fontWeight: DEFAULT_FONTWEIGHT }, ...opts };
         this.debounceTimer = null;
-
         this.init();
     }
 
-    private init(){
+    init(){
         let _tooltips = document.querySelectorAll('[toolio]');
+        console.log(_tooltips);
 
         for (let i = 0; i < _tooltips.length; i++) {
             let _tooltip = _tooltips[i] as HTMLElement;
