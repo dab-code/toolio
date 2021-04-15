@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toolio - demo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height:100vh;
+            min-height: 100vh;
+        }
+        body {
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            background-color:red;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-    <label toolio="HELLO WORLD">I need more information!</label>
+    <label style="margin: 2rem auto;" toolio="HELLO WORLD">I need more information!</label>
     <script src="../dist/toolio.min.js"></script>
     <script src="./index.js"></script>
 </body>

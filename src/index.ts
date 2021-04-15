@@ -7,6 +7,8 @@ const DEFAULT_FONTSIZE: string = '1rem';
 const DEFAULT_FONTWEIGHT: string = 'normal';
 const DEFAULT_OPTIONS: object = { visibility: 'hidden', position: 'absolute', transition: '.3s ease', opacity: 0, zIndex: 999 };
 
+// TODO : Calculate height and width og tooltip
+
 type DeepPartial<T> = { [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]; };
 type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 
