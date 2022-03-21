@@ -1,6 +1,6 @@
 {
   "name": "@dab-code/toolio",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Toolio - Accessible tooltips in a lightweight and easy-to-use package",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
@@ -43,9 +43,8 @@
     "rollup": "^2.45.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.2.4"
-  },
-  "dependencies": {
+    "typescript": "^4.2.4",
     "rollup-plugin-import-css": "^3.0.3"
-  }
+  },
+  "dependencies": {}
 }
