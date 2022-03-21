@@ -8,21 +8,15 @@ Description
 ## Table of Contents
 
 - [Install](#install)
-    - [npm]
-    - [yarn]
-    - [uunpkg]
-- [Browser support](#browser-support)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Install
-
-## Browser support
-
+- [npm] npm install --save @dab-code/toolio
 ## Usage
-
-## Contributing
+- [js] import { Toolio } from '@dab-code/toolio'
+- [js]  new Toolio()
+- [scss] @import "@dab-code/toolio/dist/index.esm.css";
 
 ## License
 `Toolio` is released under the MIT license.

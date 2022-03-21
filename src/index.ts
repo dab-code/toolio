@@ -1,5 +1,5 @@
 import './toolio.css'
-class Toolio {
+export class Toolio {
     constructor() {
         this.init();
     }
@@ -74,5 +74,3 @@ class Toolio {
         return context.measureText(text).width;
     }
 }
-
-module.exports = Toolio;

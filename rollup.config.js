@@ -12,6 +12,18 @@ export default [
   // UMD
   {    
     input: 'src/index.ts',
+
+    output: [
+      {
+        file: 'dist/index.cjs.js',
+        format: 'cjs'
+      },
+      {
+        file: 'dist/index.esm.js',
+        format: 'es'
+      }
+    ],
+
     plugins: [
       typescript({
         typescript: require('typescript'),
@@ -20,16 +32,11 @@ export default [
       babel({
         babelHelpers: "bundled",
       }),
-      css(),
+      css({
+        output: 'dist/toolio.css',
+        minify: true
+      }),
       terser(),
     ], 
-    output: {
-      file: `dist/${moduleName}.min.js`,
-      format: "umd",
-      name: "toolio",
-      esModule: false,
-      exports: "named",
-      sourcemap: true,
-    },
   }
 ];
