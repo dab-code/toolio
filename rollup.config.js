@@ -2,6 +2,7 @@ import typescript from 'rollup-plugin-typescript2'
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 import babel from "@rollup/plugin-babel";
+import css from "rollup-plugin-import-css";
 import pkg from './package.json'
 
 const moduleName = pkg.name.replace(/^@.*\//, "");
@@ -19,6 +20,7 @@ export default [
       babel({
         babelHelpers: "bundled",
       }),
+      css(),
       terser(),
     ], 
     output: {
@@ -29,29 +31,5 @@ export default [
       exports: "named",
       sourcemap: true,
     },
-  },  
-  // ESM and CJS
-  {
-    input: 'src/index.ts',
-    plugins: [
-      typescript({
-        typescript: require('typescript'),
-      }),
-      nodeResolve(),
-    ],
-    output: [
-      {
-        dir: "dist/esm",
-        format: "esm",
-        exports: "named",
-        sourcemap: true,
-      },
-      {
-        dir: "dist/cjs",
-        format: "cjs",
-        exports: "named",
-        sourcemap: true,
-      },
-    ],
-  },
+  }
 ];

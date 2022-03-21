@@ -14,19 +14,19 @@
         }
         body {
             display: flex;
+            flex-direction: column;
             font-family: 'Roboto', sans-serif;
-            background-color:red;
+            background-color:rgb(214, 212, 212);
             justify-content: center;
             align-items: center;
         }
-
-        label {
-            display: inline-block;
-        }
     </style>
+    <link href="../dist/toolio.min.css" rel="stylesheet">
 </head>
 <body>
-    <label style="margin: 2rem auto;" toolio="HELLO WORLD">I need more information!</label>
+    <label style="margin: 2rem auto;" toolio="HELLO WORLD, how are you doing?">I need more information!</label>
+    <p>If you want to know what a man's like, take a good look at how he treats his <span toolio="No no no!" toolio-placement="right" toolio-max-width="100">inferiors</span>, not his equals.</p>
+    <p>If you want to know what a man's like, take a good look at how he treats his <span toolio="Lesser people" toolio-placement="bottom">inferiors</span>, not his equals.</p>
     <script src="../dist/toolio.min.js"></script>
     <script src="./index.js"></script>
 </body>

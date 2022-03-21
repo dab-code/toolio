@@ -26,7 +26,8 @@
     "url": "git@github.com:dab-code/toolio.git"
   },
   "scripts": {
-    "build": "rimraf dist && rollup -c"
+    "build": "rimraf dist && rollup -c",
+    "dev": "rollup -c -w"
   },
   "author": "Dann Bos",
   "license": "MIT",
@@ -40,5 +41,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "rollup-plugin-import-css": "^3.0.3"
   }
 }
