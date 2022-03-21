@@ -1,6 +1,6 @@
 {
   "name": "@dab-code/toolio",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Toolio - Accessible tooltips in a lightweight and easy-to-use package",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
