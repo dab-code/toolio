@@ -1,9 +1,9 @@
 {
   "name": "@dab-code/toolio",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Toolio - Accessible tooltips in a lightweight and easy-to-use package",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
@@ -41,10 +41,10 @@
     "@rollup/plugin-node-resolve": "^11.2.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.45.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.2.4",
-    "rollup-plugin-import-css": "^3.0.3"
-  },
-  "dependencies": {}
+    "typescript": "^4.2.4"
+  }
 }
