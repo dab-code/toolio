@@ -75,4 +75,4 @@ class Toolio {
     }
 }
 
-export { Toolio };
+module.exports = Toolio;
