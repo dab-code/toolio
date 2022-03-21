@@ -4,9 +4,8 @@ export class Toolio {
         this.init();
     }
 
-    init(){
+    init = () => {
         let _tooltips = document.querySelectorAll('[toolio]');
-        console.log(_tooltips);
 
         for (let i = 0; i < _tooltips.length; i++) {
             let _tooltip = _tooltips[i] as HTMLElement;
@@ -21,7 +20,7 @@ export class Toolio {
         }
     }
 
-    public createItem(elm: HTMLElement, value: string, placement?: string, maxWidth: number = 250) {
+    createItem = (elm: HTMLElement, value: string, placement?: string, maxWidth: number = 250) => {
         let uniqueId = '_t-' + this._uniqueId();
 
         elm.setAttribute('role', 'tooltip');
@@ -47,24 +46,24 @@ export class Toolio {
         this._assignEvents(elm, template, ['mouseenter', 'focus'], ['mouseleave', 'blur']);
     }
 
-    private _assignEvents(elm: HTMLElement, template: HTMLElement, initialEvents: string[], endEvents: string[]) {
+    showTip = (elm: HTMLElement) => {
+        elm.classList.add('toolio-tip--show');
+    }
+
+    hideTip = (elm: HTMLElement) => {
+        elm.classList.remove('toolio-tip--show');
+    }
+
+    _assignEvents = (elm: HTMLElement, template: HTMLElement, initialEvents: string[], endEvents: string[]) => {
         initialEvents.forEach((evt, index) => {
             elm.addEventListener(evt, (() => { this.showTip(template) }));
             elm.addEventListener(endEvents[index], (() => { this.hideTip(template) }));
         });
     }
 
-    private showTip(elm: HTMLElement) {
-        elm.classList.add('toolio-tip--show');
-    }
+    _uniqueId = () => Math.random().toString(36).substring(2, 9);
 
-    public hideTip(elm: HTMLElement) {
-        elm.classList.remove('toolio-tip--show');
-    }
-
-    private _uniqueId = () => Math.random().toString(36).substring(2, 9);
-
-    private _getTextWidth = (text: string, font?: string) => {
+    _getTextWidth = (text: string, font?: string) => {
         const tipElement = document.querySelector('.toolio-tip');
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');

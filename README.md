@@ -16,7 +16,9 @@ Description
 ## Usage
 - [js] import { Toolio } from '@dab-code/toolio'
 - [js]  new Toolio()
-- [scss] @import "@dab-code/toolio/dist/index.esm.css";
+- [js] <script src="./node_modules/@dab-code/toolio/dist/index.js"></script>
+- [js] toolio.Toolio()
+- [scss] @import "@dab-code/toolio/dist/index.css";
 
 ## License
 `Toolio` is released under the MIT license.
