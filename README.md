@@ -18,7 +18,7 @@ Description
 $ npm install --save @dab-code/toolio
 ```
 
-### script import
+### CDN
 #### Unpkg.com (coming), so stop! Wait a minute and grab yourself a cup of coffee ☕️
 ```
 <script src="./node_modules/@dab-code/toolio/dist/index.js"></script>
@@ -55,7 +55,7 @@ toolio.Toolio()
 ...
 ```
 
-### script import
+### CDN
 
 ```
 <script>
@@ -70,7 +70,7 @@ toolio.Toolio()
 ```
 
 ### CSS
-#### Unpkg.com (coming), so don't do this just yet!
+#### CDN (coming), so don't do this just yet!
 ```
 <link href="./node_modules/@dab-code/toolio/dist/toolio.css" rel="stylesheet">
 ```  
