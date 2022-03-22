@@ -13,12 +13,12 @@ Description
 - [Roadmap](#roadmap)
 
 ## Installation
-### ESM
+### ESM & CommonJS
 ```
 $ npm install --save @dab-code/toolio
 ```
 
-### CommonJS
+### script import
 #### Unpkg.com (coming), so stop! Wait a minute and grab yourself a cup of coffee ☕️
 ```
 <script src="./node_modules/@dab-code/toolio/dist/index.js"></script>
@@ -38,7 +38,7 @@ $ npm install --save @dab-code/toolio
     toolio-max-width="250"
 ```
 
-Toolio comes both as a sweet ES module and as a nifty Commonjs. So use whichever fits your project 👍️ 
+Toolio comes both as a sweet ES module, a nifty Commonjs or a script import. So use whichever fits your project best 👍️ 
 ### ESM
 ```
 import { Toolio } from '@dab-code/toolio'
@@ -48,6 +48,14 @@ new Toolio()
 Easy-peasy 🤙
 
 ### CommonJS
+```
+const toolio = require('Toolio')
+...
+toolio.Toolio()
+...
+```
+
+### script import
 
 ```
 <script>
