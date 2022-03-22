@@ -1,45 +1,34 @@
-# Toolio
+
 [![npm downloads](https://img.shields.io/npm/dm/@dab-code/toolio)](https://npmjs.org/@dab-code/toolio)
 [![size](https://img.shields.io/bundlephobia/minzip/@dab-code/toolio?color=54CA2F&style=popout)](https://npmjs.org/@dab-code/toolio)
 
-Description
-
-
+# Toolio - A11Y accessible and lightweight tooltips
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Roadmap](#roadmap)
+- [License](#license)
+
+***
 
 ## Installation
-### ESM & CommonJS
+### ESM & CJS
 ```
 $ npm install --save @dab-code/toolio
 ```
 
 ### CDN
-#### Unpkg.com (coming), so stop! Wait a minute and grab yourself a cup of coffee ☕️
 ```
-<script src="./node_modules/@dab-code/toolio/dist/index.js"></script>
+<script src="https://unpkg.com/@dab-code/toolio@[version]/dist/cjs/index.js"></script>
 ```
 
+***
 ## Usage
-
-### HTML
-```
-<p>
-    Aristotle was a Greek <span toolio="A very smart person">philosopher</span> and <span toolio="An even smarter person!">polymath</span>
-</p>
-```
-#### Toolio html attributes
-```
-    toolio-placement="top|right|bottom|left"
-    toolio-max-width="250"
-```
 
 Toolio comes both as a sweet ES module, a nifty Commonjs or a script import. So use whichever fits your project best 👍️ 
 ### ESM
+import `Toolio` and initialize a new instance and the magic will happen on it's own - after you've sprinkled some [HTML](#HTML) dust in your templates ofc 🧙‍♀️
 ```
 import { Toolio } from '@dab-code/toolio'
 ...
@@ -47,7 +36,9 @@ new Toolio()
 ```
 Easy-peasy 🤙
 
-### CommonJS
+
+### CJS
+Require that bad boy, initialize a new instance and and throw in a couple [HTML](#HTML) elements with some toolio attributes ⚾️
 ```
 const toolio = require('Toolio')
 ...
@@ -55,8 +46,9 @@ toolio.Toolio()
 ...
 ```
 
-### CDN
 
+### CDN
+Same as above, just easier!
 ```
 <script>
     ...
@@ -64,15 +56,31 @@ toolio.Toolio()
     ...
 </script>
 ```
-### SCSS
+
+
+### HTML
+```
+<p>
+    Aristotle was a Greek <span toolio="A very smart person">philosopher</span> and <span toolio="An even smarter person!">polymath</span>
+</p>
+```
+
+
+#### Toolio html attributes
+```
+    toolio-placement="top|right|bottom|left"
+    toolio-max-width="250"
+```
+
+
+### SCSS/CSS
 ```
 @import "@dab-code/toolio/dist/index.css";
 ```
 
-### CSS
-#### CDN (coming), so don't do this just yet!
+#### CDN 
 ```
-<link href="./node_modules/@dab-code/toolio/dist/toolio.css" rel="stylesheet">
+<link href="https://unpkg.com/@dab-code/toolio@[version]/dist/toolio.css" rel="stylesheet">
 ```  
 
 Toolio uses css variables, so it's pretty easy to change the look and feel of the tooltips. Simply overwrite the default variables by creating your own custom variables. 👩‍💻
@@ -95,11 +103,14 @@ Toolio uses css variables, so it's pretty easy to change the look and feel of th
 }
 ```
 
+***
 
 ## Roadmap
-- Unpkg.com
 - Pure js tooltip creation on an element: 
     - `Toolio.createTipOnElement(elm, options)`
     - This way we can customize each tooltip by passing in the options object. 🎨
+
+***
+
 ## License
 `Toolio` is released under the MIT license.
