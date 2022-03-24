@@ -46,7 +46,6 @@ export class Toolio {
     }
 
     showTip = (elm: HTMLElement) => {
-        elm.a
         elm.classList.add('toolio-tip--show');
     }
 
