@@ -1,28 +1,29 @@
 # Toolio - A11Y accessible and lightweight tooltips
-**Title**
-Toolio was created as a side-project with the goal to create easy-to-use and accessible tooltips, th. 
+**Toolio** was created as a side-project with the goal to create easy-to-use and accessible tooltips. 
 
-It should be noted that Toolio should only be used to creat informative tooltips and not contain anything other than concise supplemental information, as this makes their use a lot less accessible. It is, of course, up to you how you use it! 🙏 
+It should be noted that Toolio should only be used to creat informative tooltips and not contain anything other than concise supplemental information, as this makes their use a lot less accessible. 
+
+It is of course up to you how you use it! 🙏 
 
 
-**
+***
 
 ## Installation
-1. Package Manager
+- Package Manager
 ```
 $ npm i -S @dab-code/toolio
 ```
 
-2. CDN
+- CDN
 ```
 <script src="https://unpkg.com/@dab-code/toolio@[version]/dist/cjs/index.js"></script>
 ```
 
-**
+***
 
 ## Usage
 ### Module bundlers
-You can import the `Toolio` constructor and initialize a new instance and you're good to go! 🤙
+You can import the `Toolio` constructor and initialize a new instance! Now all gyou need to do is sprinkling a couple of toolio attributes into your HTML template! 🦄
 
 ```
 import { Toolio } from '@dab-code/toolio'
@@ -30,13 +31,15 @@ import { Toolio } from '@dab-code/toolio'
 new Toolio()
 ```
 
+
 ### CJS
-Require that bad boy, initialize a new instance and and throw in a couple HTML elements with some toolio attributes ⚾️
+Require that bad boy, initialize a new instance and go crazy! 🥳
 ```
 const toolio = require('Toolio')
 
 toolio.Toolio()
 ```
+
 
 ### CDN
 ```
@@ -47,17 +50,27 @@ toolio.Toolio()
 </script>
 ```
 
+
 ### HTML
-To actually display anything, you need to sprinkle in a bit of HTML in your templates. Toolio finds all the elements with the `toolio` attribute and takes its value and creates a tooltip.
-It's possible to change the tooltips placement by using the `toolio-placement="top|right|bottom|left"` attribute and the same goes for the tooltips `max-width`, simply insert `toolio-max-width="250"`. 🧑‍💻
+Now wasn't that easy? Now all you need to do is find something cool and smart to attach a tooltip to 🤷
+
+
+All you have to do is create a `span` element around the word(s) you want your cool tooltip to be assigned to. The add the `toolio` attribute to said `span` and type in your fancy words!
+
+
+If you'd like to either change tooltips max-width og placement, you can simply use the attributes `toolio-max-width` (defaults to `250`) and `toolio-placement`, which accepts `top|right|bottom|left` (defaults to `top`). 🧑‍💻
+
 ```
 <p>
     Aristotle was a Greek <span toolio="A very smart person">philosopher</span> and <span toolio="An even smarter person!">polymath</span>
 </p>
 ```
 
+
 ### Styling
-Remember to import Toolios styling. This can be done either by importing it (if you're using a module bundler) or with a simply CDN link thrown into yout HTML template.
+Remember to import Toolios styling. This can be done either by importing it (if you're using a module bundler) or simply  with by adding the CDN in your `<head>` section.
+
+
 1. Module bundlers
 ``` 
 @import "@dab-code/toolio/dist/index.css";
@@ -68,8 +81,11 @@ Remember to import Toolios styling. This can be done either by importing it (if 
 <link href="https://unpkg.com/@dab-code/toolio@[version]/dist/toolio.css" rel="stylesheet">
 ```
 
+
 ### Customizing the tooltips
-Out of the box Toolio uses css variables, which you can easily overwrite by creating a `[toolio]` selector in your preferred styling language. Go ahead and go nuts! 🥜
+As I was looking for the easiest way to get started, I chose to use css variables to style the tooltips. This means it should be quite easy to overrule the default styling. 🎂 
+
+To change the variables, create a new scoped selector name `[toolio]´ and go nuts! 🥜
 
 ```
 [toolio] {
@@ -89,6 +105,7 @@ Out of the box Toolio uses css variables, which you can easily overwrite by crea
     --T_EASING-LEAVE: .25s ease .25s;
 }
 ```
+
 
 ***
 
