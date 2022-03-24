@@ -23,7 +23,6 @@ export class Toolio {
     createItem = (elm: HTMLElement, value: string, placement?: string, maxWidth: number = 250) => {
         let uniqueId = '_t-' + this._uniqueId();
 
-        elm.setAttribute('role', 'tooltip');
         elm.setAttribute('aria-describedby', uniqueId);
         elm.tabIndex = 0; // Tab-able at elements relative position in document
 
@@ -47,6 +46,7 @@ export class Toolio {
     }
 
     showTip = (elm: HTMLElement) => {
+        elm.a
         elm.classList.add('toolio-tip--show');
     }
 
