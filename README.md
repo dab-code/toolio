@@ -1,10 +1,23 @@
 # Toolio - A11Y accessible and lightweight tooltips
+
+[![npm downloads](https://img.shields.io/npm/dm/@dab-code/toolio)](https://npmjs.org/@dab-code/toolio)
+[![size](https://img.shields.io/bundlephobia/minzip/@dab-code/toolio?color=54CA2F&style=popout)](https://npmjs.org/@dab-code/toolio)
+
 **Toolio** was created as a side-project with the goal to create easy-to-use and accessible tooltips. 
 
 It should be noted that Toolio should only be used to creat informative tooltips and not contain anything other than concise supplemental information, as this makes their use a lot less accessible. 
 
 It is of course up to you how you use it! 🙏 
 
+
+***
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [License](#license)
 
 ***
 
