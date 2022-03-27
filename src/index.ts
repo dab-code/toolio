@@ -39,7 +39,6 @@ export class Toolio {
         elm.appendChild(template);
 
         const textWidth = this._getTextWidth(value);
-        console.log(textWidth)
         template.style.width = `calc(${textWidth > maxWidth ? Math.round(maxWidth) : Math.round(textWidth)}px + 1.6rem)`;
 
         this._assignEvents(elm, template, ['mouseenter', 'focus'], ['mouseleave', 'blur']);
