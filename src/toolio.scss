@@ -8,10 +8,10 @@
     --T_FONTWEIGHT: normal;
     --T_EASING-ENTER: .25s ease .125s;
     --T_EASING-LEAVE: .25s ease .25s;
-    --T_TEXTDECORATION: underline dotted;
+    --T_TEXTDECORATION: 2px dotted;
 
     position: relative;
-    text-decoration: var(--T_TEXTDECORATION);
+    border-bottom: var(--T_TEXTDECORATION);
     cursor: pointer;
 }
 
