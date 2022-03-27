@@ -29,7 +29,7 @@ $ npm i -S @dab-code/toolio
 
 - CDN
 ```
-<script src="https://unpkg.com/@dab-code/toolio@[version]/dist/cjs/index.js"></script>
+<script src="https://unpkg.com/@dab-code/toolio@latest/dist/index.js"></script>
 ```
 
 ***
@@ -56,7 +56,7 @@ toolio.Toolio()
 
 ### CDN
 ```
-<script src="https://unpkg.com/@dab-code/toolio@[version]/dist/cjs/index.js"></script>
+<script src="https://unpkg.com/@dab-code/toolio@latest/dist/index.js"></script>
 
 <script>
     toolio.Toolio()
@@ -100,7 +100,7 @@ Remember to import Toolios styling. This can be done either by importing it (if 
 
 2. CDN
 ```
-<link href="https://unpkg.com/@dab-code/toolio@[version]/dist/toolio.css" rel="stylesheet">
+<link href="https://unpkg.com/@dab-code/toolio@latest/dist/toolio.css" rel="stylesheet">
 ```
 
 
