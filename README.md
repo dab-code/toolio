@@ -68,10 +68,19 @@ toolio.Toolio()
 Now wasn't that easy? Now all you need to do is find something cool and smart to attach a tooltip to 🤷
 
 
-All you have to do is create a `span` element around the word(s) you want your cool tooltip to be assigned to. The add the `toolio` attribute to said `span` and type in your fancy words!
+All you have to do is create a `span` element around the word(s) you want your cool tooltip to be assigned to. The add the `toolio` attribute to said `span` and insert all the fancy explantions!
 
 
-If you'd like to either change tooltips max-width og placement, you can simply use the attributes `toolio-max-width` (defaults to `250`) and `toolio-placement`, which accepts `top|right|bottom|left` (defaults to `top`). 🧑‍💻
+If you'd like to either change tooltips max-width og placement, you can simply use the attributes `toolio-max-width` (default: `250`) and `toolio-placement` (default: `top`), which accepts:
+
+ ```
+ top-start | top | top-end
+ right-start | right | right-end
+ bottom-start | bottom | bottom-end
+ left-end | left | left-start
+ ```
+
+ **Example:**
 
 ```
 <p>
@@ -123,12 +132,12 @@ To change the variables, create a new scoped selector name `[toolio]´ and go nu
 ***
 
 ## Roadmap
+- ✅ More placement options.
+	- `[top|top-start|top-end|right-start|right|right-end|bottom-start|bottom|bottom-end|left-end|left|left-start]`
 - WCAG 2.1: dismissable, hoverable, and persistent
 - Pure JS tooltip ccreation on a html element.
 	- `Toolio.createTipOnElement(elm, options)`
 	- This way we can customize each tooltip by passing in the options object. 🎨
-- More placement options.
-	- `[top|top-left|top-right|right-top|right|right-bottom|bottom-right|bottom|bottom-left|left-bottom|left|left-top]`
 	
 ***
 
